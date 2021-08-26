@@ -21,7 +21,7 @@ public class PulsarButton: UIButton {
     public var startOpacity: CGFloat = 0.9
     public var timingFunctionName: CAMediaTimingFunctionName = .easeOut
     
-    func setupPulsarLayers() {
+    public func setupPulsarLayers() {
         layoutSubviews()
         layoutIfNeeded()
         
@@ -49,7 +49,7 @@ public class PulsarButton: UIButton {
         })
     }
     
-    func animatePulsatingLayer(for index:Int) {
+    private func animatePulsatingLayer(for index:Int) {
         guard index < pulseArray.count else { return }
         
         pulseArray[index].strokeColor = strokeColor.cgColor
