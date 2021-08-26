@@ -25,7 +25,7 @@ public class PulsarButton: UIButton {
         layoutSubviews()
         layoutIfNeeded()
         
-        for _ in 0..<2 {
+        for _ in 0...2 {
             let circularPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: layer.cornerRadius)
             let pulsatingLayer = CAShapeLayer()
             pulsatingLayer.path = circularPath.cgPath
